@@ -1,0 +1,26 @@
+{
+  "name": "csbin-exercises",
+  "version": "1.0.0",
+  "description": "TypeScript function practice exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:intro": "vitest run tests/intro",
+    "test:callbacks": "vitest run tests/callbacks",
+    "test:closures": "vitest run tests/closures",
+    "test:async": "vitest run tests/async",
+    "test:oop": "vitest run tests/oop",
+    "test:recursion": "vitest run tests/recursion",
+    "compile": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}
