@@ -18,6 +18,52 @@ Your role is to:
 
 The user must write all function implementations and tests themselves as this is a learning exercise.
 
+## Code Review and Grading
+
+When the user requests code review or grading:
+
+### Default Behavior
+- If no specific section/challenges are mentioned, ask the user which section or specific challenges they want reviewed
+- Evaluate the user as a junior-to-mid level engineer (professional standards, not beginner)
+- Always run the tests first to verify functionality
+
+### Review Format
+Use this structure for comprehensive reviews:
+
+```
+## Grade: [Letter Grade] ([Score]/100)
+
+### Challenge [N] - [Function Name] [Status] ([Points]/[Total])
+**[Overall Assessment]** [Brief summary]
+
+**What works well:**
+- [Positive points about implementation]
+- [Good practices demonstrated]
+
+**Issues/Improvements:**
+- [Specific problems with line references]
+- [Suggestions for better approaches]
+
+**Code Quality Notes:**
+- [Professional-level feedback on style, efficiency, edge cases]
+
+### Overall Assessment
+[Summary of strengths and areas for growth, considering junior-to-mid level expectations]
+```
+
+### Grading Criteria
+- **Functionality (40%)**: Does it work correctly and pass tests?
+- **Code Quality (30%)**: Readability, efficiency, best practices
+- **Edge Case Handling (20%)**: Robustness and error handling
+- **TypeScript Usage (10%)**: Proper typing and TS features
+
+### Professional Standards
+Evaluate based on what would be expected in a professional codebase:
+- Performance considerations
+- Maintainability and readability  
+- Defensive programming practices
+- Appropriate use of language features
+
 ## Project Commands
 
 ### Running Tests
