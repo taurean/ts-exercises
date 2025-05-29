@@ -14,7 +14,7 @@
 export const buildGreeting = (time: number, name: string) => {
     if (time >= 0 && time <= 11) {
         return `Good Morning, ${name}!`;
-    } else if (time <= 16) {
+    } else if (time >= 12 && time <= 16) {
         return `Good Afternoon, ${name}!`;
     } else if (time <= 23) {
         return `Good Evening, ${name}!`;
