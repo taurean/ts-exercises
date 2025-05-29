@@ -64,6 +64,12 @@ Evaluate based on what would be expected in a professional codebase:
 - Defensive programming practices
 - Appropriate use of language features
 
+### Exercise Context Notes
+- Many challenge comments reference `console.log` as they originate from external exercise sources
+- For this repository, functions should return values instead of console.logging them
+- Tests are designed to verify returned values, not console output
+- When reviewing, focus on return values rather than logging behavior
+
 ## Project Commands
 
 ### Running Tests
