@@ -8,9 +8,5 @@
  */
 
 export const letterExists = (word: string, character: string) => {
-    if (word.indexOf(character) >= 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return word.indexOf(character) >= 0;
 };
