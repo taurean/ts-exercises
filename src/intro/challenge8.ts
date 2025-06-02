@@ -12,5 +12,15 @@
  */
 
 export const range = (start: number, end: number) => {
-    return [start, end];
+    let range: number[] = [];
+
+    if (end < start) {
+        return range;
+    }
+
+    for (let index = start; index <= end; index++) {
+        range.push(index);
+    }
+
+    return range;
 };
