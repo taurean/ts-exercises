@@ -15,22 +15,16 @@ type genericTypes = null | undefined | boolean | BigInt | number | string;
 
 /**
  * a basic recreation of the builtIn `indexOf` function
- * @param {array} array - the array being checked
- * @param {array} array - the element being checked
+ * @param {genericTypes[]} array - the array being checked
+ * @param {genericTypes} ele - the element being checked
  */
 
 export const myIndexOf = (array: genericTypes[], ele: genericTypes) => {
-    // returns early response if element doesnt exist
-    if (!array.includes(ele)) {
-        return -1;
-    }
-    // create a new arr comprised of every value in
-    // the array up to the searched for value
-    let newTrackerArr = [];
-
-    for (let index = 0; array[index] !== ele; index++) {
-        newTrackerArr.push(array[index]);
+    for (let index = 0; index !== array.length; index++) {
+        if (array[index] === ele) {
+            return index;
+        }
     }
 
-    return newTrackerArr.length;
+    return -1;
 };
