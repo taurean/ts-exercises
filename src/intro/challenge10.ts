@@ -19,7 +19,7 @@ type uniqueArrayItem = number | string;
 export const unique = (array: uniqueArrayItem[]) => {
     const newArr: uniqueArrayItem[] = [];
 
-    for (let index = 0; index < array.length - 1; index++) {
+    for (let index = 0; index < array.length; index++) {
         if (!newArr.includes(array[index])) {
             newArr.push(array[index]);
         }
