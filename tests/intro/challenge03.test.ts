@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { lastLetter } from "../../src/intro/challenge3";
+import { lastLetter } from "../../src/intro/challenge03";
 
 describe("challenge 3", () => {
     test("return the last character/letter of a word", () => {

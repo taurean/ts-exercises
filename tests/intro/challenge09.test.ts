@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { myIndexOf } from "../../src/intro/challenge9";
+import { myIndexOf } from "../../src/intro/challenge09";
 
 describe("Challenge 9", () => {
     test("get index of item from array", () => {

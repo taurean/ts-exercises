@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { isPrime } from "../../src/intro/challenge7";
+import { isPrime } from "../../src/intro/challenge07";
 
 describe("Challenge 7", () => {
     test("return true or false depending on if the passed in number is a prime number", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { letterExists } from "../../src/intro/challenge6";
+import { letterExists } from "../../src/intro/challenge06";
 
 describe("challenge 6", () => {
     test("returns true or false depending on if letter exists", () => {

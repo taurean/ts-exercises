@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { buildGreeting } from "../../src/intro/challenge4";
+import { buildGreeting } from "../../src/intro/challenge04";
 
 describe("challenge 4", () => {
     test("return greeting depending on time of day", () => {

@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { range } from "../../src/intro/challenge8";
+import { range } from "../../src/intro/challenge08";
 
 describe("Challenge 8", () => {
     test("return an array of numbers between the two param values", () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { buildSentence } from "../../src/intro/challenge2";
+import { buildSentence } from "../../src/intro/challenge02";
 
 describe("challenge 2", () => {
     test("adds three words together with punctuation and capitalization of the first letter", () => {
