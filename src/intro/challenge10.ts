@@ -17,6 +17,9 @@ type uniqueArrayItem = number | string;
  */
 
 export const unique = (array: uniqueArrayItem[]) => {
+    if (array.length === 0) {
+        return [];
+    }
     const newArr: uniqueArrayItem[] = [];
 
     for (let index = 0; index < array.length; index++) {
