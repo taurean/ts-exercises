@@ -13,28 +13,16 @@
  */
 
 export const disemvowel = (string: string) => {
-    let newString = "";
+    const vowels = "aeiouyAEIOUY";
+    let newStringArray: string[] = [];
 
     for (let index = 0; index < string.length; index++) {
         const currentCharacter = string.charAt(index);
 
-        if (
-            currentCharacter === "a" ||
-            currentCharacter === "A" ||
-            currentCharacter === "e" ||
-            currentCharacter === "E" ||
-            currentCharacter === "i" ||
-            currentCharacter === "I" ||
-            currentCharacter === "o" ||
-            currentCharacter === "O" ||
-            currentCharacter === "u" ||
-            currentCharacter === "U"
-        ) {
-            newString = newString;
-        } else {
-            newString = newString + currentCharacter;
+        if (!vowels.includes(currentCharacter)) {
+            newStringArray.push(currentCharacter);
         }
     }
 
-    return newString;
+    return newStringArray.join("");
 };
