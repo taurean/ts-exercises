@@ -15,11 +15,15 @@
 
 const greatestCommonDivisor = (num1: number, num2: number): number => {
     // via https://cwestblog.com/2012/10/12/javascript-euclidean-algorithm/
-    return num2 ? greatestCommonDivisor(num2, num1 % num2) : num1;
+    const a = Math.abs(num1);
+    const b = Math.abs(num2);
+    return b ? greatestCommonDivisor(b, a % b) : a;
 };
 
 export const leastCommonMultiple = (num1: number, num2: number): number => {
     // via https://www.calculatorsoup.com/calculators/math/gcf.php
     // leastCommonMultiple(a, b) = (a*b)greatestCommonDivisor(a, b)
-    return (num1 * num2) / greatestCommonDivisor(num1, num2);
+    const a = Math.abs(num1);
+    const b = Math.abs(num2);
+    return (a * b) / greatestCommonDivisor(a, b);
 };
