@@ -42,5 +42,5 @@ export const highestScore = (students: student[]): string => {
     const studentName = students[studentId].name.split(" ");
 
     // concatenate the string of the initials and ID of the highest scoring student
-    return `${studentName[0].charAt(0)}${studentName[1].charAt(0)}${students[studentId].id}`;
+    return `${studentName[0].charAt(0)}${studentName[studentName.length - 1].charAt(0)}${students[studentId].id}`;
 };
