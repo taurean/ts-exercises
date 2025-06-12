@@ -20,25 +20,21 @@ type count = {
 export const arrayBuilder = (count: count): string[] => {
     // initiate new empty array to construct
     let outputArray: string[] = [];
-    const argsCount = Object.keys(count);
 
     // if object is empty, return empty array
-    if (!argsCount.length) {
+    if (!Object.keys(count).length) {
         return outputArray;
     }
 
-    // destructure each key value pair and then add the
-    // key to an array for the number of times in the value
-    // then merge to the outputArray
+    // loop through each string/amount key-value pair
     for (const [string, amount] of Object.entries(count)) {
-        const newSubArray: string[] = [];
-
-        // loop pushing {string} for {amount} of times
-        for (let subIndex = 0; subIndex < amount; subIndex++) {
-            newSubArray.push(string);
+        // skip if amount is negative value
+        if (amount) {
+            // loop pushing {string} for {amount} of times
+            for (let subIndex = 0; subIndex < amount; subIndex++) {
+                outputArray.push(string);
+            }
         }
-
-        outputArray = outputArray.concat(newSubArray);
     }
 
     return outputArray;
