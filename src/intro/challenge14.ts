@@ -28,19 +28,22 @@ type student = {
  */
 
 export const highestScore = (students: student[]): string => {
-    // flatten all scores into an array in the same order of the students
-    const scoreArray = students.map((student) => {
-        return student.score;
-    });
-
-    // find the ID of the student with the highest score
-    const studentId: number = students.findIndex((student) => {
-        return student.score === Math.max(...scoreArray);
-    });
+    // find the winning student
+    const winningStudent: student = students.reduce(
+        (lastBestStudent: student, currentStudent: student) => {
+            // loop through students by comparing two at a time,
+            // return the student object that has a higher score
+            if (lastBestStudent.score > currentStudent.score) {
+                return lastBestStudent;
+            } else {
+                return currentStudent;
+            }
+        },
+    );
 
     // create an array of the winning students first and last name to get initials
-    const studentName = students[studentId].name.split(" ");
+    const studentName = winningStudent.name.split(" ");
 
     // concatenate the string of the initials and ID of the highest scoring student
-    return `${studentName[0].charAt(0)}${studentName[studentName.length - 1].charAt(0)}${students[studentId].id}`;
+    return `${studentName[0].charAt(0)}${studentName[studentName.length - 1].charAt(0)}${winningStudent.id}`;
 };
