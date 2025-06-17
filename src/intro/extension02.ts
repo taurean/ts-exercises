@@ -17,9 +17,8 @@ type numberObj = {
  */
 
 export const objectBuilder = (count: number): numberObj => {
-    let outputObj: numberObj = {
-        0: 0,
-    };
+    let outputObj: numberObj = Object.create(null);
+
     for (let index = 0; index <= count; index++) {
         outputObj[index] = index * 5;
     }
