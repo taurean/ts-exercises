@@ -9,23 +9,22 @@
  * original character.
  */
 
-type cipher = {
+type Cipher = {
     [key: string]: string;
 };
 
-export const secretCipher = (sentence: string, cipher: cipher): string => {
-    let translatedStr = sentence;
+export const secretCipher = (sentence: string, cipher: Cipher): string => {
+    let translatedStr = new Array();
 
-    for (let index = 0; index <= Object.keys(cipher).length; index++) {
-        const key = Object.keys(cipher)[index];
-        const value = Object.values(cipher)[index];
-
-        if (translatedStr.includes(key)) {
-            translatedStr = translatedStr.replaceAll(key, value);
+    for (let index = 0; index < sentence.length; index++) {
+        if (sentence[index] in cipher) {
+            translatedStr.push(cipher[sentence[index]]);
+        } else {
+            translatedStr.push(sentence[index]);
         }
     }
 
-    return translatedStr;
+    return translatedStr.join("");
 };
 
 /*
