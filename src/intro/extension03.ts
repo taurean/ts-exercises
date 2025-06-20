@@ -13,6 +13,12 @@ type Cipher = {
     [key: string]: string;
 };
 
+/**
+ * modify an input string with a specific set of character replacements determined by an object
+ * @param {string} sentence - input sentence that should be transformed
+ * @param { Cipher } cipher - object defining the characters that should be replaced and what they should be replaced with
+ */
+
 export const secretCipher = (sentence: string, cipher: Cipher): string => {
     let translatedStr = new Array();
 
