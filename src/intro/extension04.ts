@@ -19,6 +19,13 @@ type student = {
     grades: grade[];
 };
 
+/**
+ * Returns name of students with passing grade averages (>= 70)
+ *
+ * @param students - array of student objects
+ * @returns array of passing student names
+ */
+
 export const passingStudents = (students: student[]): string[] => {
     let outputStudents: string[] = new Array();
 
